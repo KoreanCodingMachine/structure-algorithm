@@ -15,20 +15,32 @@
 // ▣ 출력예제 2
 // 15
 
+// 나의 풀이
+
+// function solution(n) {
+//   let answer;
+//   let result = parseInt(n / 12);
+
+//   if (n < 12) {
+//     answer = 1;
+//   } else {
+//     if (result % 12 === 0) {
+//       answer = result;
+//     } else {
+//       answer = result + 1;
+//     }
+//   }
+
+//   return answer;
+// }
+
+// console.log(solution(178));
+
+// 강의에서 풀이
+// Math 객체 활용
+
 function solution(n) {
-  let answer;
-  let result = parseInt(n / 12);
-
-  if (n < 12) {
-    answer = 1;
-  } else {
-    if (result % 12 === 0) {
-      answer = result;
-    } else {
-      answer = result + 1;
-    }
-  }
-
+  let answer = Math.ceil(n / 12);
   return answer;
 }
 

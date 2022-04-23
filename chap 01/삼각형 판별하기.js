@@ -16,6 +16,8 @@
 // ▣ 출력예제 1
 // NO
 
+//삼각형이 되기위한 조건 -> 짧은 막대 두개의 합이 가장 큰 변의 길이보다 커야함
+
 function solution(a, b, c) {
   let answer = 'YES';
   let max = 0;
