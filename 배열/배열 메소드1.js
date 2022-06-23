@@ -1,10 +1,10 @@
-//1.Array.isArray;
+//Array.isArray;
 //메서드는 전달된 인수가 배열이면 true , 아니면 false를 반환한다.
 
 Array.isArray([]); // true
 Array.isArray(); // false
 
-//2.Array.prototype.indexOf;
+//Array.prototype.indexOf;
 //원본 배열에서 인수로 전달된 요소를 검색하여 인덱스를 반환한다.
 //원본 배열에 인수로 전달한 요소와 중복되는 요소가 여러 개 있다면 첫 번째로 검색된 요소의 인덱스를 반환한다.
 //존재하지 않으면 -1을 반환한다.
@@ -25,7 +25,7 @@ if (!foods.includes('orange')) {
 
 console.log(foods); // ['apple', 'banana', 'orange']
 
-//3.Array.prototype.push
+//Array.prototype.push
 //인수로 전달받은 모든 값을 원본 배열의 마지막 요소로 추가 , 변경된 length프로퍼티 값을 반환한다.
 //원본 배열을 직접 변경한다.
 
@@ -40,7 +40,7 @@ const arr3 = [1, 2];
 const newArr = [...arr3, 3];
 console.log(newArr); // [1,2,3]
 
-//4.Array.prototype.pop
+//Array.prototype.pop
 //원본 배열에서 마지막 요소를 제거하고 제거한 요소를 반환한다.
 //원본 배열을 직접 변경한다.
 
