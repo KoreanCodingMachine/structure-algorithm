@@ -18,8 +18,16 @@ function solution(s1, s2) {
   for (let x of s1) {
     if (x === s2) answer++;
   }
-
   return answer;
 }
+
+// function solution(s1, s2) {
+//   let answer = 0;
+//   for (let x of s1) {
+//     if (x === s2) answer++;
+//   }
+
+//   return answer;
+// }
 
 console.log(solution('COMPUTERPROGRAMMING', 'R'));

@@ -33,6 +33,12 @@
 
 function solution(s) {
   let answer = 0;
+
+  return answer;
+}
+
+function solution(s) {
+  let answer = 0;
   let pos = s.indexOf('k');
   while (pos !== -1) {
     answer++;

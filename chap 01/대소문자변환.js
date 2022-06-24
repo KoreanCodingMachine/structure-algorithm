@@ -11,14 +11,46 @@
 // ▣ 출력예제 1
 // sTUdy
 
+//아스키코드 알파벳 A -> 65 Z -> 90 a->98 z->122
+
+//풀이 1 아스키코드로 풀이방식
 function solution(s) {
   let answer = '';
   for (let x of s) {
-    if (x === x.toUpperCase(x)) answer += x.toLowerCase();
-    else answer += x.toUpperCase();
+    let num = x.charCodeAt(x); // ASCII 코드로 바꾼후
+    //대문자라면
+    if (num <= 90) {
+      answer += x.toLowerCase();
+    } //소문자라면
+    else {
+      answer += x.toUpperCase();
+    }
   }
-
   return answer;
 }
+
+//풀이 2 단순 비교
+
+function solution(s) {
+  let answer = '';
+  for (let x of s) {
+    if (x === x.toUpperCase) {
+      answer += x.toLowerCase();
+    } else {
+      answer += x.toUpperCase();
+    }
+  }
+  return answer;
+}
+
+// function solution(s) {
+//   let answer = '';
+//   for (let x of s) {
+//     if (x === x.toUpperCase(x)) answer += x.toLowerCase();
+//     else answer += x.toUpperCase();
+//   }
+
+//   return answer;
+// }
 
 console.log(solution('StuDY'));

@@ -12,8 +12,13 @@
 // ITISTIMETOSTUDY
 
 function solution(n) {
-  let str = n.toUpperCase();
-  return str;
+  let answer = n.toUpperCase();
+  return answer;
 }
+
+// function solution(n) {
+//   let str = n.toUpperCase();
+//   return str;
+// }
 
 console.log(solution('ItisTimeToStudy'));

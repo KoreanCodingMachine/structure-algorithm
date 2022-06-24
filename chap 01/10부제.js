@@ -26,6 +26,17 @@
 // ▣ 출력예제 2
 // 3
 
+//1. 단순 for문으로 구현하는 방식
+function solution(date, arr) {
+  let answer = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 10 === date) answer++;
+  }
+  return answer;
+}
+
+//2.for of문으로 해결하기
+
 function solution(date, arr) {
   let answer = 0;
   for (x of arr) {
@@ -35,4 +46,14 @@ function solution(date, arr) {
   }
   return answer;
 }
+
+// function solution(date, arr) {
+//   let answer = 0;
+//   for (x of arr) {
+//     if (x % 10 === date) {
+//       answer++;
+//     }
+//   }
+//   return answer;
+// }
 console.log(solution(4, [25, 23, 11, 47, 53, 17, 33]));

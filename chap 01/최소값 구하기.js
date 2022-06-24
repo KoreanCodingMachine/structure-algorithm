@@ -30,7 +30,16 @@
 // let arr = [5, 7, 1, 3, 2, 9, 11];
 // console.log(solution(arr));
 
-//강의 에서 풀이 1
+// 강의 에서 풀이 1
+
+function solution(arr) {
+  let answer;
+
+  return answer;
+}
+
+console.log(solution([5, 7, 1, 3, 2, 9, 11]));
+
 // function solution(arr) {
 //   let answer,
 //     min = Number.MAX_SAFE_INTEGER; // 최소값을 구할때 큰 숫자로 초기화

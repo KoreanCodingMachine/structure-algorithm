@@ -20,6 +20,12 @@
 
 function solution(a, b, c) {
   let answer = 'YES';
+
+  return answer;
+}
+
+function solution(a, b, c) {
+  let answer = 'YES';
   let max = 0;
   let total = a + b + c;
   if (a > b) {

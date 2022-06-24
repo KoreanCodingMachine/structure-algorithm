@@ -40,8 +40,13 @@
 // Math 객체 활용
 
 function solution(n) {
-  let answer = Math.ceil(n / 12);
+  let answer;
   return answer;
 }
+
+// function solution(n) {
+//   let answer = Math.ceil(n / 12);
+//   return answer;
+// }
 
 console.log(solution(178));

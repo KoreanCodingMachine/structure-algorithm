@@ -11,15 +11,24 @@
 // ▣ 출력예제 1
 // 3
 
-//charCodeAt() => index해당 문자의 unicode값을 return
+//charCodeAt(index) => index해당 문자의 unicode값을 return
 
 function solution(s) {
   let answer = 0;
   for (let x of s) {
-    let num = x.charCodeAt(x);
-    if (num >= 65 && num <= 90) answer++; // ASCII 코드 기준 대문자 범위
+    let num = x.charCodeAt(x); //
+    if (num >= 65 && num <= 90) answer++;
   }
   return answer;
 }
+
+// function solution(s) {
+//   let answer = 0;
+//   for (let x of s) {
+//     let num = x.charCodeAt(x);
+//     if (num >= 65 && num <= 90) answer++; // ASCII 코드 기준 대문자 범위
+//   }
+//   return answer;
+// }
 
 console.log(solution('KoreaTimeGood'));

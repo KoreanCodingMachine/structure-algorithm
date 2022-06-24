@@ -29,13 +29,28 @@
 
 function solution(s) {
   let answer;
-  let mid = parseInt(s.length / 2);
-  if (s.length % 2 === 1) {
-    answer = s.substr(mid, 1);
-  } else {
-    answer = s.substr(mid - 1, 2);
+  //홀수 일때
+  let mid = s.length / 2;
+  if (mid % 2 === 1) {
+    answer = s.substr(parseInt(s.length / 2), 1);
+  } //홀수 일때
+  else {
+    answer = s.substr(s.length / 2 - 1, 2);
   }
   return answer;
 }
 
 console.log(solution('good'));
+
+// function solution(s) {
+//   let answer;
+//   let mid = parseInt(s.length / 2);
+//   if (s.length % 2 === 1) {
+//     answer = s.substr(mid, 1);
+//   } else {
+//     answer = s.substr(mid - 1, 2);
+//   }
+//   return answer;
+// }
+
+// console.log(solution('good'));
