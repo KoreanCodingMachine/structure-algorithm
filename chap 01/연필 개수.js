@@ -40,7 +40,7 @@
 // Math 객체 활용
 
 function solution(n) {
-  let answer;
+  let answer = Math.ceil(n / 12);
   return answer;
 }
 

@@ -19,10 +19,12 @@
 // time
 // student
 
+// String.indexOf 검색하여 반환된 첫번째 문자열을 반환한다.
+
 function solution(s) {
   let answer;
-  answer = s.filter((v, i) => {
-    return s.indexOf(v) === i;
+  answer = s.filter((a, b) => {
+    return s.indexOf(a) === b; // 처음 발견된것만 리턴 -> 중복된것은 출력하지 않음
   });
   return answer;
 }

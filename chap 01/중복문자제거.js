@@ -17,31 +17,35 @@
 //첫번째 해당하는 인덱스만 반환한다. 없으면 -1을 반환한다.
 //position속성을 이용해 시작 인덱스를 정할수 있다.
 
-// function solution(s) {
-//   let answer = '';
-//   for (let i = 0; i < s.length; i++) {
-//     console.log(s[i], i, s.indexOf(s[i]));
-//     if (s.indexOf(s[i]) === i) answer += s[i];
-//   }
-//   return answer;
-// }
+//문자열이기 때문에 filter 메서드를 사용할 수 없다. 햇갈리지 말것
 
-// console.log(solution('ksekkset'));
+function solution(s) {
+  let answer = '';
+  for (let i = 0; i < s.length; i++) {
+    if (s.indexOf(s[i]) === i) {
+      answer += s[i];
+    }
+  }
+  return answer;
+}
+
+console.log(solution('ksekkset'));
 
 // 특정문자 찾기
 // k의 개수는?
 
-function solution(s) {
-  let answer = 0;
+// function solution(s) {
+//   let answer = 0;
 
-  return answer;
-}
+//   return answer;
+// }
 
-function solution(s) {
-  let answer = 0;
-  let pos = s.indexOf('k');
-  while (pos !== -1) {
-    answer++;
-    pos = s.indexOf('k', pos + 1);
-  }
-}
+// function solution(s) {
+//   let answer = 0;
+//   let pos = s.indexOf('k');
+//   while (pos !== -1) {
+//     answer++;
+//     pos = s.indexOf('k', pos + 1);
+//   }
+// }
+// console.log(solution('ksekkset'));
