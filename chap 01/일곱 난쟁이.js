@@ -17,25 +17,24 @@
 // ▣ 출력예제 1
 // 20 7 23 19 10 8 13
 
+// 9개 중에서 2개를 제외한 7개의 합이 100이 되면 됨으로
+// 입력받은 값 중에서 2개씩 뽑아서 (for문 2회)
+
+//다시 한번 더 풀어보기
+
 function solution(arr) {
   let answer = arr;
-  let sum = arr.reduce((a, b) => a + b, 0);
+  let sum = answer.reduce((a, b) => a + b, 0);
+  for (let i = 0; i < 8; i++) {
+    for (let j = i + 1; j < 9; j++) {
+      if (sum - (answer[i] + answer[j]) === 100) {
+        answer.splice(j, 1);
+        answer.splice(i, 1);
+      }
+    }
+  }
   return answer;
 }
-
-// function solution(arr) {
-//   let answer = arr;
-//   let sum = answer.reduce((a, b) => a + b, 0);
-//   for (let i = 0; i < 8; i++) {
-//     for (let j = i + 1; j < 9; j++) {
-//       if (sum - (answer[i] + answer[j]) === 100) {
-//         answer.splice(j, 1);
-//         answer.splice(i, 1);
-//       }
-//     }
-//   }
-//   return answer;
-// }
 
 let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
 console.log(solution(arr));
