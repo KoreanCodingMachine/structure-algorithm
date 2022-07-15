@@ -26,50 +26,7 @@
 
 function solution(arr) {
   let answer;
-  let result1 = [];
-  let result2 = [];
-  let result3 = [];
-  let result4 = [];
-  let num1 = 0,
-    num2 = 0;
-  for (let i = 0; i < arr.length; i++) {
-    let sum1 = 0,
-      sum2 = 0;
-    for (let j = 0; j < arr.length; j++) {
-      sum1 += arr[i][j];
-      sum2 += arr[j][i];
-    }
-    result1.push(sum1);
-    result2.push(sum2);
-  }
 
-  for (let i = 0; i < arr.length; i++) {
-    let sum1 = 0,
-      sum2 = 0;
-    for (let j = 0; j < arr.length; j++) {
-      if (i === j) {
-        sum1 += arr[i][j];
-      }
-      if (j === 4 - i) {
-        sum2 += arr[i][j];
-      }
-    }
-    result3.push(sum1);
-    result4.push(sum2);
-  }
-  let result = result1.concat(result2);
-  for (let x of result3) {
-    num1 += x;
-  }
-  for (let x of result4) {
-    num2 += x;
-  }
-  result1.push(num1);
-  result1.push(num2);
-  result1.push(...result2);
-
-  let max = Math.max(...result1);
-  answer = max;
   return answer;
 }
 

@@ -23,17 +23,16 @@
 // 10
 
 function solution(arr) {
-  let answer = 0,
-    cnt = 0;
+  let answer = 0;
+  let count = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 0) {
-      answer += 0;
-      cnt = 0;
-    }
     if (arr[i] === 1) {
-      cnt++;
-      answer += cnt;
+      count += 1;
+      answer += count;
+    } else {
+      count = 0;
+      continue;
     }
   }
   return answer;

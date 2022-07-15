@@ -15,14 +15,15 @@
 //
 
 function solution(arr) {
-  let answer = 1; // 일단 한명은 무조건 보임
-  let max = arr[0]; // 가장 키 큰 학생의 값을 맨 앞에 학생으로 초기화
+  let answer = 1;
+  let standard = arr[0];
   for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > max) {
+    if (arr[i] > standard) {
       answer++;
-      max = arr[i];
+      standard = arr[i];
     }
   }
+
   return answer;
 }
 

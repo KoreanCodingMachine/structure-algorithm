@@ -27,19 +27,32 @@
 // B
 // D
 
+// 접근 방식 -> 규칙을 찾았다.
+// 규칙을 찾고나서 조건문으로 로직을 적용
+// 까먹은 로직 -> a[i] > b[i] 뿐만이 아니고 b[i] > a[i] 일 경우도 생각하자
+
 function solution(a, b) {
   let answer = '';
+
   for (let i = 0; i < a.length; i++) {
+    if (a[i] - b[i] === 1 || a[i] - b[i] === -1) {
+      if (a[i] > b[i]) {
+        answer += 'A';
+      } else {
+        answer += 'B';
+      }
+    }
+
+    if (a[i] - b[i] === 2 || a[i] - b[i] === -2) {
+      if (a[i] > b[i]) {
+        answer += 'B';
+      } else {
+        answer += 'A';
+      }
+    }
+
     if (a[i] === b[i]) {
       answer += 'D';
-    } else if (a[i] === 1 && b[i] === 3) {
-      answer += 'A';
-    } else if (a[i] === 2 && b[i] === 1) {
-      answer += 'A';
-    } else if (a[i] === 3 && b[i] === 2) {
-      answer += 'A';
-    } else {
-      answer += 'B';
     }
   }
   return answer;

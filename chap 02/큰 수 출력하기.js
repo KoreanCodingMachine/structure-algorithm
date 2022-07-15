@@ -7,7 +7,7 @@
 // 자신의 바로 앞 수보다 큰 수만 한 줄로 출력한다.
 
 // ▣ 입력예제 1
-// 6
+// 6 -> 배열의 length
 // 7 3 9 5 6 12
 // ▣ 출력예제 1
 // 7 9 6 12
@@ -15,11 +15,13 @@
 function solution(arr) {
   let answer = [];
   answer.push(arr[0]);
-  arr.filter((v, i) => {
-    if (arr[i + 1] > arr[i]) {
-      answer.push(arr[i + 1]);
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > arr[i - 1]) {
+      answer.push(arr[i]);
     }
-  });
+  }
+
   return answer;
 }
 
