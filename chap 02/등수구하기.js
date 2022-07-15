@@ -14,7 +14,23 @@
 // ▣ 출력예제 1
 // 4 3 2 1 5
 
+// 접근방법
+/*
+1.count 변수를 만들어서 (배열의 순서를 정할)
+2.for문으로 배열 전체를 순회하면서 자기보다 같은수 혹은 큰 수가 있다면 count를 더해준다. 
+3.다음에 작은수를 만났을떄 같은 숫자 만큼 더해준다. 
+예를 들어 87 87 87 100 90 의 경우 90이 5가된다. 
+*/
+
 function solution(arr) {
+  let n = arr.length;
+  let answer = Array.from({ length: n }, () => 1); // 배열을 1로 초기화
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] < arr[j]) answer[i]++;
+    }
+  }
   return answer;
 }
 

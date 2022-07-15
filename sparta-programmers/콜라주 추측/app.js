@@ -24,7 +24,7 @@ function solution(num) {
     if (num != 1) {
       num = num % 2 === 0 ? num / 2 : num * 3 + 1;
     } else {
-      console.log(i);
+      // console.log(i);
       answer = i;
       return answer;
     }

@@ -6,7 +6,7 @@
 //  participant 문자열 배열 중에서
 //  completion 문자열 배열에 없는 요소를 찾아서 return한다.
 
-function solution(participant, completion) {
+function solution1(participant, completion) {
   participant.sort(); //참가자 배열 정렬
   completion.sort(); //완주자 배열 정렬
   for (var i = 0; i < participant.length; i++) {
@@ -17,3 +17,39 @@ function solution(participant, completion) {
     }
   }
 }
+
+function solution2(participant, completion) {
+  let answer = '';
+
+  for (let i = 0; i < participant.length; i++) {
+    for (let j = 0; j < completion.length; j++) {
+      // 참가자의 인덱스와 완주자의 인덱스가 같다면
+      if (participant[i] === completion[j]) {
+        participant[i] = null;
+        completion[j] = null; // -> 이 코드가 3번 테스트케이스가 안나온 이유이다. 좀 더 고민해보자 아.. 한번 완주하면 없어져야 하는데.. 젠장
+        // 즉 동일인물이면 이걸 completion 배열에도 2명이 있어야 하는데
+        break;
+      }
+    }
+  }
+
+  for (let i = 0; i < participant.length; i++) {
+    if (participant[i] !== null) {
+      answer = participant[i];
+      break;
+    }
+  }
+
+  return answer;
+}
+
+console.log(solution2(['leo', 'kiki', 'eden'], ['eden', 'kiki']));
+console.log(
+  solution2(
+    ['marina', 'josipa', 'nikola', 'vinko', 'filipa'],
+    ['josipa', 'filipa', 'marina', 'nikola']
+  )
+);
+console.log(
+  solution2(['mislav', 'stanko', 'mislav', 'ana'], ['stanko', 'ana', 'mislav'])
+);

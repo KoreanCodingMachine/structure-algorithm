@@ -31,33 +31,37 @@
 // 규칙을 찾고나서 조건문으로 로직을 적용
 // 까먹은 로직 -> a[i] > b[i] 뿐만이 아니고 b[i] > a[i] 일 경우도 생각하자
 
+// 접근 방식2 -> A가 이기는 경우의 수만 찾으면 나머지는 B가 지는 경우의 수이기 때문에 A가 이기는 수만 검사해보면 될것같다.
+
+/*
+  일단 같으면 비기는거고 
+
+  A가 이기는 경우의 수
+
+  가위 > 보 (1>3)
+  바위 > 가위 (2>1)
+  보 > 바위 (3>2)
+
+*/
+
 function solution(a, b) {
   let answer = '';
-
   for (let i = 0; i < a.length; i++) {
-    if (a[i] - b[i] === 1 || a[i] - b[i] === -1) {
-      if (a[i] > b[i]) {
-        answer += 'A';
-      } else {
-        answer += 'B';
-      }
-    }
-
-    if (a[i] - b[i] === 2 || a[i] - b[i] === -2) {
-      if (a[i] > b[i]) {
-        answer += 'B';
-      } else {
-        answer += 'A';
-      }
-    }
-
     if (a[i] === b[i]) {
       answer += 'D';
+    } else if (a[i] === 1 && b[i] === 3) {
+      answer += 'A';
+    } else if (a[i] === 2 && b[i] === 1) {
+      answer += 'A';
+    } else if (a[i] === 3 && b[i] === 2) {
+      answer += 'A';
+    } else {
+      answer += 'B';
     }
   }
   return answer;
 }
 
-let a = [2, 3, 3, 1, 3];
-let b = [1, 1, 2, 2, 3];
-console.log(solution(a, b));
+let aa = [2, 3, 3, 1, 3];
+let bb = [1, 1, 2, 2, 3];
+console.log(solution(aa, bb));
